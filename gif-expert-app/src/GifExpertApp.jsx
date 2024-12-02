@@ -1,14 +1,26 @@
 // import React from "react";
 import { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
+import { GifGrid } from "./components/GifGrid";
 
 export const GifExpertApp = () => {
     
-    const [categories, setCategories] = useState(['One Punch', 'Dragon Ball']);
+    const [categories, setCategories] = useState(['One Punch']);
 
-    const onAddCategory = (newCagory) => {
-        setCategories([...categories, newCagory])
-        console.log(newCagory);
+    const onAddCategory = (newCategory) => {
+
+        // Normalizar a minúsculas para comparación
+        const normalizedNewCategory = newCategory.toLowerCase();
+
+        // Verificar si la categoría ya existe (insensible a mayúsculas/minúsculas)
+        if (categories.some(category => category.toLowerCase() === normalizedNewCategory)) {
+            console.error(`La categoría "${newCategory}" ya existe.`);
+            return;
+        }
+
+        // Agregar la nueva categoría si no existe
+        setCategories([...categories, newCategory]);
+        console.log(`Categoría "${newCategory}" agregada.`);    
         // console.log(typeof addText)
 
         // const addText = document.querySelector('#addCategory').value; //Agrega el texto del input al DOM
@@ -17,26 +29,26 @@ export const GifExpertApp = () => {
 
     return (
         <>
-            {/* {titulo} */} 
             <h1>GifExpertApp</h1>
 
-            {/* {input} */}
             <AddCategory 
                 // setCategories={setCategories}
                 onNewCategory = {(value) => onAddCategory(value)}
             />
 
-            {/* Listado de Gif */}
+            {/* Boton input */}
             {/* <input type="text" id="addCategory" placeholder="Agregar nueva categoria"/><br /> */}
             {/* <button onClick={onAddCategory}>Agregar</button> */}
 
-            <ol>
-                {categories.map(category => {
-                    return <li key={category}>{category}</li>
-                })}
-                {/* <li></li> */}
-            </ol>
-                {/* {Gif Item} */}
+            {
+                categories.map(category =>  (
+                    <GifGrid key={category} category={category}/>
+                ))   
+            }
         </>
     )
 }
+
+
+
+
