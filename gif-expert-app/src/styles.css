@@ -1,70 +1,99 @@
-* {
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: rgb(220, 232, 255);
-  }
-  
-  body {
-    padding: 60px;
-  }
-  
-  input {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid rgb(97, 32, 158);
-    color: black;
-    font-size: 1.2rem;
-    outline: none;
-    padding: 10px 15px;
-    width: 100%;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  h3 {
-    font-size: 3rem;
-    margin-bottom: 5px;
-  }
-  
-  .card-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card {
-    align-content: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
-    display: flex;
-    flex-direction: column;
-    height: 0%;  
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    overflow: hidden;
-  }
-  
-  .card p {
-    background-color: white;
-    flex: 1;
-    font-size: 1.5rem;
-    margin-top: 5px;
-    padding: 5px 20px 0px 20px;
-    text-align: center;
-  }
-  
-  .card img {
-    width: 100%;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parkinsans:wght@300..800&family=Permanent+Marker&display=swap');
 
-  #addCategory{
-    width: 13rem;
-    font-size: 1rem;
-    height: 0.5rem;
-    margin-bottom: 1rem;
-  }
+body {
+  padding: 60px;
+  background-color: #1e2533;
+  color: #fff;
+  /* background-image: url(https://images.unsplash.com/photo-1672750771479-5ea73e9439ce?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; */
+}
+
+input {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(32, 55, 158);
+  color: black;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 10px 15px;
+  width: 30%;
+  margin-left: 35%;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.card-grid {
+  backdrop-filter: blur(8px);
+  background-color: #8d8d8d3f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px;
+}
+
+.card {
+  align-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  height: 0%;  
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+  font-family: 'Parkinsans';
+  color: #000;
+}
+
+.card p {
+  background-color: white;
+  flex: 1;
+  font-size: 1.5rem;
+  margin-top: 5px;
+  padding: 5px 20px 0px 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+#addCategory{
+  font-size: 0.5rem;
+  height: 0.5rem;
+  margin-bottom: 1rem;
+  width: 13rem;
+}
+
+.title-category{
+  align-items: center;
+  background-color: rgb(0, 56, 119);
+  border-radius: 5px;
+  display: flex;
+  font-family: 'Parkinsans';
+  font-weight: 500;
+  justify-content: center;
+  width: 20%;
+}
+
+.title-app{
+  display: flex;
+  font-family: 'Gloria Hallelujah';
+  font-size: 2.3rem;
+  justify-content: center;
+}

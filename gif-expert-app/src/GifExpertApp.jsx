@@ -1,7 +1,6 @@
 // import React from "react";
 import { useState } from "react";
-import { AddCategory } from "./components/AddCategory";
-import { GifGrid } from "./components/GifGrid";
+import { AddCategory, GifGrid } from "./components";
 
 export const GifExpertApp = () => {
     
@@ -21,24 +20,15 @@ export const GifExpertApp = () => {
         // Agregar la nueva categoría si no existe
         setCategories([...categories, newCategory]);
         console.log(`Categoría "${newCategory}" agregada.`);    
-        // console.log(typeof addText)
-
-        // const addText = document.querySelector('#addCategory').value; //Agrega el texto del input al DOM
-        // setCategories([...categories, addText]); //Agregar categoria mediante un input
     }
 
     return (
         <>
-            <h1>GifExpertApp</h1>
+            <h1 className="title-app">Gif Expert App</h1>
 
             <AddCategory 
-                // setCategories={setCategories}
                 onNewCategory = {(value) => onAddCategory(value)}
             />
-
-            {/* Boton input */}
-            {/* <input type="text" id="addCategory" placeholder="Agregar nueva categoria"/><br /> */}
-            {/* <button onClick={onAddCategory}>Agregar</button> */}
 
             {
                 categories.map(category =>  (
@@ -51,4 +41,21 @@ export const GifExpertApp = () => {
 
 
 
+// ---- EXPLICACION DEL CODIGO ----
 
+    /* categories: Es una lista que contiene las categorías activas en la aplicación. Inicialmente tiene un elemento, ['One Punch'].
+    setCategories: Es la función para actualizar el estado de categories.
+    useState: Es un hook de React que gestiona el estado local dentro del componente. */
+
+   /* const onAddCategory = (newCategory): 
+    Verificación: Usa some para comprobar si la categoría ya existe (independientemente de las mayúsculas).
+    Agregar nueva categoría: Si no existe, la agrega al estado actual usando:
+    setCategories([...categories, newCategory]);
+    Esto crea un nuevo arreglo con las categorías existentes más la nueva. */
+
+    /* AddCategory: Es un componente hijo que probablemente contiene un formulario o entrada de texto para que el usuario agregue nuevas categorías.
+    Prop onNewCategory: Se pasa una referencia a la función onAddCategory para manejar las nuevas categorías desde el componente hijo.
+    */
+
+    /* categories.map: Recorre todas las categorías en el estado y renderiza un componente GifGrid para cada una.
+    GifGrid: Es otro componente hijo que probablemente muestra los GIFs relacionados con una categoría. */
