@@ -18,4 +18,4 @@ Esta aplicación es un proyecto desarrollado en **React.js** que consume la API 
 
 1. Clona el repositorio:
    ```bash
-   git clone <URL-del-repositorio>
+   git clone https://github.com/Brendaur11/GifExpert-App.git
