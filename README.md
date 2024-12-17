@@ -11,7 +11,7 @@ Esta aplicación es un proyecto desarrollado en **React.js** que consume la API 
 ## Tecnologías utilizadas
 
 - **React.js**: Biblioteca principal para la construcción de la interfaz.
-- **Fetch API/Axios**: Para realizar las solicitudes a la API de Giphy.
+- **Fetch API**: Para realizar las solicitudes a la API de Giphy.
 - **CSS**: Para el diseño y estilos.
 
 ## Cómo ejecutar el proyecto
