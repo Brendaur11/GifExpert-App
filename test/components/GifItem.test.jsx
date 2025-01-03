@@ -4,7 +4,7 @@ import { GifItem } from "../../src/components/GifItem"
 describe('Pruebas en GifItem', () => { 
 
     const title = 'Futurama'
-    const url = 'https://Futurama.com.ar/futurama.jpg'
+    const url = 'https://futurama.com.ar/futurama.jpg'
 
     test('debe hacer match con el Snapshot', () => { 
     
@@ -19,6 +19,11 @@ describe('Pruebas en GifItem', () => {
         const {src, alt} = screen.getByRole('img');
         expect(src).toBe(url);
         expect(alt).toBe(alt);
+    });
+
+    test('debe de mostrar el titulo en el componente', () => {
+        render(<GifItem title={title} url={url}/>);
+        expect(screen.getByText(title)).toBeTruthy();
     });
 
 });

@@ -7,7 +7,7 @@ exports[`Pruebas en GifItem debe hacer match con el Snapshot 1`] = `
   >
     <img
       alt="title"
-      src="https://Futurama.com.ar/futurama.jpg"
+      src="https://futurama.com.ar/futurama.jpg"
     />
     <p>
       Futurama
