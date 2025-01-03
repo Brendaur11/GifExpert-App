@@ -10,8 +10,7 @@ export const GifGrid = ({category}) => {
       <h1 className="title-category">{category}</h1>
 
       {
-        isLoading && (<h2>Cargando...</h2> ) 
-        //si isLoading es verdero, ejecuta la condicion (h2), si es falso no continua haciendo las demas evaluaciones
+        isLoading && (<h2>Cargando...</h2> ) //si isLoading es verdero, ejecuta la condicion (h2), si es falso no continua haciendo las demas evaluaciones
       }
 
       <div className="card-grid">

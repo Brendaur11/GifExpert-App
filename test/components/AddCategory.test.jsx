@@ -37,8 +37,15 @@ describe('Pruebas en AddCategory', () => {
 
     test('no debe de llamar el onNewCategory si el input esta vacio', () => {
 
-        
-    })
+        const onNewCategory = jest.fn(); // Simula la función
 
+        render(<AddCategory onNewCategory={onNewCategory}/>); // Renderiza el componente
+
+        const form = screen.getByRole('form') // Obtiene el formulario
+
+        fireEvent.submit(form); // Simula el envío sin escribir texto
+
+        expect(onNewCategory).not.toHaveBeenCalled(); // Verifica que no se llame
+    });
 
 });
