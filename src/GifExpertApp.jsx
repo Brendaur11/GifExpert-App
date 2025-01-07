@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { AddCategory, GifGrid } from "./components";
 
+
 export const GifExpertApp = () => {
     
     const [categories, setCategories] = useState(['The Simpsons']);
@@ -10,7 +11,7 @@ export const GifExpertApp = () => {
 
         // Normalizar a minúsculas para comparación
         const normalizedNewCategory = newCategory.toLowerCase();
-
+        
         // Verificar si la categoría ya existe (insensible a mayúsculas/minúsculas)
         if (categories.some(category => category.toLowerCase() === normalizedNewCategory)) {
             console.error(`La categoría "${newCategory}" ya existe.`);
